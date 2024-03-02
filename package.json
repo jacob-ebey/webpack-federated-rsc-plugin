@@ -1,0 +1,26 @@
+{
+  "name": "webpack-federated-rsc-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/mod.d.ts",
+  "main": "./dist/mod.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "5.3.3",
+    "webpack": "5.90.3"
+  },
+  "dependencies": {
+    "@module-federation/enhanced": "0.0.13",
+    "@module-federation/runtime": "0.0.13",
+    "unplugin-rsc": "0.0.7"
+  }
+}
