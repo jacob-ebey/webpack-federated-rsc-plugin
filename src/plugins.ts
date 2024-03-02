@@ -17,6 +17,7 @@ export class ServerRSCPlugin {
       remoteType: NonNullable<
         ConstructorParameters<typeof ModuleFederationPlugin>[0]
       >["remoteType"];
+      rsdResource: string;
       serverModules: Set<string>;
       shared: ConstructorParameters<typeof ModuleFederationPlugin>[0]["shared"];
     }
@@ -30,6 +31,7 @@ export class ServerRSCPlugin {
       howToLoad,
       libraryType,
       remoteType,
+      rsdResource,
       serverModules,
       shared,
     } = this.options;
@@ -126,7 +128,6 @@ export class ServerRSCPlugin {
       }
     }
 
-    const rsdResource = require.resolve("framework/framework");
     compiler.hooks.compilation.tap(
       "MyPlugin",
       (compilation, { normalModuleFactory }) => {
